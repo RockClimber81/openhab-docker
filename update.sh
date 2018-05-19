@@ -134,7 +134,11 @@ print_basepackages() {
 	    netbase \
 	    unzip \
 	    wget \
-	    zip && \
+	    zip \
+            inetutils-ping \
+            arping && \
+            chmod u+s /usr/sbin/arping && \
+            ln -s /usr/sbin/arping /usr/bin/arping && \
 	    ln -s -f /bin/true /usr/bin/chfn
 
 EOI
